@@ -55,8 +55,7 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with VitePress
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} vitepress build docs
-          mkdir -p ${{ env.BUILD_PATH}}/docs/.vitepress/dist
+          ${{ steps.detect-package-manager.outputs.runner }} vitepress build
           touch ${{ env.BUILD_PATH}}/docs/.vitepress/dist/.nojekyll
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
