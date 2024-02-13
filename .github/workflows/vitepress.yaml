@@ -55,7 +55,7 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with VitePress
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} vitepress build
+          ${{ steps.detect-package-manager.outputs.runner }} vitepress build docs
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
