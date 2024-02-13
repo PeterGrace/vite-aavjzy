@@ -56,7 +56,7 @@ jobs:
       - name: Build with VitePress
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} vitepress build
-          touch docs/.vitepress/dist/.nojekyll
+          touch ${{ env.BUILD_PATH}}/.vitepress/dist/.nojekyll
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
