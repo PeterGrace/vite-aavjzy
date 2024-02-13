@@ -7,6 +7,6 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "vitepress": "latest"
+    "vitepress": "^1.0.0-rc.42"
   }
 }
